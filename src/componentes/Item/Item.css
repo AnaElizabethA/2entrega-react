@@ -1,0 +1,7 @@
+.cardProducto {
+    background-color: rgb(252, 227, 255);
+    border-style: double;
+    margin: 1rem;
+    padding: 1rem;
+    width: fit-content;
+}

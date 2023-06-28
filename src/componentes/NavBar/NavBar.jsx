@@ -4,15 +4,15 @@ import './NavBar.css'
 
 const NavBar = () => {
     return (
-        <header>
+        <header >
             <nav>
-                <div>
+                <div className='principal'>
                     <Link to={'/'} >
                         <h2>"Arrimos Morales"</h2>
                         <img src="../img/logoarrimo.jpg" alt="logo" />
                     </Link>
 
-                    <div>
+                    <div className='menu'>
                         <ul >
                             <li >
                                 <NavLink to={'/'}>Todo Muebles</NavLink>

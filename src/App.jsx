@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './componentes/NavBar/NavBar';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import ItemContador from './componentes/ItemContador/ItemContador';
 import './App.css';
 
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/item/:idItem' element= {<ItemDetailContainer/>} />
           <Route path='*' element= {<h1> 404 NOT FOUND </h1>} />
         </Routes>
+        <ItemContador inicial={1} stock={10} onAdd={(contador) => console.log("Cantidad agregada", contador)}/>
       </BrowserRouter>
 
     </>
