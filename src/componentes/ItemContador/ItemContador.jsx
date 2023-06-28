@@ -1,20 +1,20 @@
 import React from 'react'
 import { useState } from 'react'
 
-const ItemContador = () => {
-    //hooks: 
+const ItemContador = ({inicial,stock,onAdd}) => {
+
+
     const [contador, setContador] = useState(1);
-    
-    let maximoStock = 10; 
+
 
     const sumar = () => {
-        if(contador < maximoStock) {
+        if(contador < stock) {
             setContador(contador + 1);
         }
     }
 
     const restar = () => {
-        if(contador > 1){
+        if(contador > inicial){
             setContador(contador - 1);
         }
     }
@@ -27,7 +27,7 @@ const ItemContador = () => {
         <button onClick={ sumar }> + </button>
         </div>
         <div>
-            <button className="botonCarrito" onClick={() => onAdd(contador)} disabled={!maximoStock}>
+            <button className="botonCarrito" onClick={() => onAdd(contador)}>
                 Agregar al carrito
             </button>
         </div>
