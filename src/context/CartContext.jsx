@@ -16,8 +16,8 @@ export const CartProvider = ({ children }) => {
   const addItem = (item, quantity) => {
     const productoEnCarrito = cart.find(prod => prod.item.id === item.id)
 
-    if (!productoEnCarrito(item.id)) {
-      setCart(prev => [...prev, { ...item, quantity }]);
+    if (!productoEnCarrito) {
+      setCart(prev => [...prev, { item, quantity }]);
       setTotalQuantity(prev => prev + quantity);
       setTotal(prev => prev + (item.precio * quantity));
     } else {

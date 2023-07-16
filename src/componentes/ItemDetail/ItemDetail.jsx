@@ -4,7 +4,7 @@ import ItemContador from '../ItemContador/ItemContador'
 import { Link } from 'react-router-dom'
 
 import { useContext } from 'react'
-import { CartContext } from '../context/CartContext'
+import CartContext from "../../context/CartContext"
 
 const ItemDetail = ({ id, nombre, precio, img, stock, descripcion }) => {
 
@@ -37,16 +37,17 @@ const ItemDetail = ({ id, nombre, precio, img, stock, descripcion }) => {
           <h3>Precio: {precio} </h3>
         </section>
 
-        <ItemContador inicial={1} stock={10} onAdd={onAdd} />
+        <footer className='ItemFooter'>
+          {quantityAdded > 0 ? (
+            <Link to='/cart' className='Option'> Terminar compra </Link>
+          ) : (
+            <ItemContador initial={1} stock={stock} onAdd={handleOnAdd} />
+          )}
+
+        </footer>
       </article>
 
-      <footer className='ItemFooter'>
-        {quantityAdded > 0 ? (
-          <Link to='/cart' className='Option'> Terminar compra </Link>
-        ) : (
-          <ItemContador initial={1} stock={stock} onAdd={handleOnAdd} />
-        )}
-      </footer></>
+    </>
   )
 }
 

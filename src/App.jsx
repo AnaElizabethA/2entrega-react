@@ -4,7 +4,7 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import Cart from './componentes/Cart/Cart'
 import './App.css';
-import { CartProvider } from './Context/CartContext';
+import { CartProvider } from './context/CartContext';
 
 const App = () => {
   return (

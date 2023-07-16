@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { CartContext } from '../../context/CartContext'
+import CartContext from "../../context/CartContext"
 import { Link } from "react-router-dom";
-import CartItem from "../CartItem/CartItem";
+
 
 const CartItem = ({ item, quantity }) => {
     const { eliminarProducto } = useContext(CartContext);

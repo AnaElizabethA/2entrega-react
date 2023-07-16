@@ -7,7 +7,7 @@ const NavBar = () => {
         <header >
             <Link to={'/'} >
                 <h2>"Arrimos Morales"</h2>
-                <img src="../img/logoarrimo.jpg" alt="logo" />
+                <img className='imgArrrimos' src="../img/logoarrimo.jpg" alt="logo" />
             </Link>
 
             <nav className='menu'>
