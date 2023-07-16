@@ -1,12 +1,26 @@
 import './CartWidget.css'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
+import { Link } from 'react-router-dom'
 
+// esto configura la imagen del carrito y numero
 const CartWidget = () => {
-    const carrito ="https://cdn-icons-png.flaticon.com/512/3394/3394009.png"
+
+  const { totalQuantity } = useContext(CartContext)
+  const imgCart = "https://cdn-icons-png.flaticon.com/512/3394/3394009.png"
+
   return (
-    <div>
-        <img className='carro' src={carrito} alt="imagen"/>
-        <strong> 0 </strong>
-    </div>
+    <>
+      <Link to='/cart' className='CartWidget' style={{ display: totalQuantity > 0 ? 'block' : 'none' }}>
+
+        <img className='CartImg' src={imgCart} alt="imagen" />
+        {
+          cantidadTotal > 0 && <strong> {totalQuantity} </strong>
+        }
+        
+      </Link>
+    </>
+
   )
 }
 

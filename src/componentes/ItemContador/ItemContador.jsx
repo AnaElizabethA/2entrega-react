@@ -4,7 +4,7 @@ import { useState } from 'react'
 const ItemContador = ({inicial,stock,onAdd}) => {
 
 
-    const [contador, setContador] = useState(1);
+    const [contador, setContador] = useState(inicial);
 
 
     const sumar = () => {
@@ -20,7 +20,7 @@ const ItemContador = ({inicial,stock,onAdd}) => {
     }
 
   return (
-    <div>
+    <>
         <div>
         <button onClick={ restar }> - </button>
         <p> {contador} </p>
@@ -31,7 +31,7 @@ const ItemContador = ({inicial,stock,onAdd}) => {
                 Agregar al carrito
             </button>
         </div>
-    </div>
+    </>
     
 
   )
