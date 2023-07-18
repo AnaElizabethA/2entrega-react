@@ -36,7 +36,7 @@ export const CartProvider = ({ children }) => {
   }
 
   const eliminarProducto = (itemId) => {
-    const productoEliminado = carrito.find(prod => prod.item.id === id);
+    const productoEliminado = cart.find(prod => prod.item.id === itemId);
     const cartActualizado = cart.filter(prod => prod.id !== itemId)
     setCart(cartActualizado)
     setTotalQuantity(prev => prev - productoEliminado.quantity);
