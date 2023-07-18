@@ -2,13 +2,13 @@
     display: inline-block;
     background-color: rgb(252, 227, 255);
     border-style: double;
-    margin: 1rem;
+    margin: 2rem;
     padding: 1rem;
     width: fit-content;
 }
 
 .imgProducto {
-    width: 20rem;
+    width: 22rem;
     height: 15rem;
     object-fit: contain;
 }

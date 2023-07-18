@@ -49,10 +49,6 @@ export const CartProvider = ({ children }) => {
     setTotal (0)
   }
 
-  /*const productoEnCarrito = (itemId) => {
-    return cart.some(prod => prod.id === itemId)
-  }*/
-
 
   return (
     <CartContext.Provider value={{ cart, total, totalQuantity, addItem, eliminarProducto, limpiarCarrito, }}>

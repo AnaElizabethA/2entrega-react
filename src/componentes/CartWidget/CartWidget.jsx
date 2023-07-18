@@ -1,9 +1,9 @@
 import './CartWidget.css'
 import { useContext } from 'react'
-import CartContext from "../../context/CartContext" 
+import CartContext from "../../context/CartContext"
 import { Link } from 'react-router-dom'
 
-// esto configura la imagen del carrito y numero
+
 const CartWidget = () => {
 
   const { totalQuantity } = useContext(CartContext)
@@ -11,16 +11,15 @@ const CartWidget = () => {
 
   return (
     <>
-      <Link to='/cart' className='CartWidget' style={{ display: totalQuantity > 0 ? 'block' : 'none' }}>
+      <Link to='/cart' className='CartWidget' >
 
         <img className='CartImg' src={imgCart} alt="imagen" />
         {
           totalQuantity > 0 && <strong> {totalQuantity} </strong>
         }
-        
+
       </Link>
     </>
-
   )
 }
 

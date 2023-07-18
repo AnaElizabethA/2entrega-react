@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 
-const ItemContador = ({inicial,stock,onAdd}) => {
+const ItemContador = ({initial,stock,onAdd}) => {
 
 
-    const [contador, setContador] = useState(inicial);
+    const [contador, setContador] = useState(initial);
 
 
     const sumar = () => {
@@ -14,7 +14,7 @@ const ItemContador = ({inicial,stock,onAdd}) => {
     }
 
     const restar = () => {
-        if(contador > inicial){
+        if(contador > initial){
             setContador(contador - 1);
         }
     }
