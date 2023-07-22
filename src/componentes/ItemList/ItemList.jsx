@@ -1,5 +1,4 @@
 import Item from "../Item/Item"
-// hacer el css
 
 const ItemList = ({productos}) => {
   return (
